@@ -1,5 +1,9 @@
-export const home = (req,res) => 
-res.render("home",{pageTitle:'Home'}); // 두번째 인자는 템플릿에 인자전달 함.
+import {videos} from "../db"
+export const home = (req,res) => {
+    res.render("home", {pageTitle: "Home", videos})
+}
+
+// 두번째 인자는 템플릿에 인자전달 함.
 
 export const search = (req, res) => {
     const {
@@ -11,8 +15,8 @@ export const search = (req, res) => {
 
 export const upload = (req, res) =>
 res.render("upload",{pageTitle:'Upload'});
-export const videos = (req, res) => 
-res.render("videos",{pageTitle:'Videos'});
+// export const videos = (req, res) => 
+// res.render("videos",{pageTitle:'Videos'});
 export const videoDetail = (req, res) => 
 res.render("videoDetail",{pageTitle:'Video Detail'});
 export const editVideo = (req, res) => 
