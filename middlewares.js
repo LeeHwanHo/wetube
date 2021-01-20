@@ -1,7 +1,7 @@
 import routes from "./routes";
 import multer from "multer";
 
-const multerVideo = multer({dest: "videos/"})
+const multerVideo = multer({dest: "uploads/videos"}) // /uploads/videos computer root upload
 
 export const localsMiddleware = (req,res,next) => {
     res.locals.siteName = 'Wetube';
