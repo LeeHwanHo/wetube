@@ -10,13 +10,13 @@ const VideoSchema = new mongoose.Schema({
         required: "Title is required"
     },
     description: String,
-    view: {
+    views: {
         type: Number,
         default: 0
     },
     createdAt: {
         type: Date,
-        defulat: Date.now
+        default: Date.now
     },
     comments: [{
         type: mongoose.Schema.Types.ObjectId,
